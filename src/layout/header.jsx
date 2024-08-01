@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
 import logo from '../assets/images/header/logo.png';
 import { GoPerson } from 'react-icons/go';
-import LoginPopup from './_components/LoginPopup';
+import LoginPopup from './_components/loginPopup';
 import { routes } from '../constants/routes';
 
 export default function Header() {
@@ -51,10 +51,10 @@ export default function Header() {
                 퀵 캐스팅
                 {isQuickcastingHover && (
                   <div className="absolute top-full left-0 bg-black text-white rounded-b-2xl border-t border-t-1 border-white shadow-lg p-4">
-                    <Link to={routes.profilepick} className="text-sm block hover:text-gray-400">
+                    <Link to={routes.profilepick} className="text-xs block hover:text-gray-400 py-1">
                       PROFILE PICK
                     </Link>
-                    <Link to={routes.videopick} className="text-sm block hover:text-gray-400">
+                    <Link to={routes.videopick} className="text-xs block hover:text-gray-400 py-1">
                       VIDEO PICK
                     </Link>
                   </div>
