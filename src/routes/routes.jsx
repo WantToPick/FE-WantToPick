@@ -5,8 +5,8 @@ import { routes } from '../constants/routes';
 
 import Header from '../layout/header';
 import HomePage from '../pages/home/page';
-import ProfilePickPage from '../pages/guickcasting/profilepick/page';
-import VideoPickPage from '../pages/guickcasting/videopick/page';
+import ProfilePickPage from '../pages/guickCasting/profilePick/page';
+import VideoPickPage from '../pages/guickCasting/videoPick/page';
 import RecruitPage from '../pages/recruit/page';
 import CommunityPage from '../pages/community/page';
 
@@ -26,11 +26,11 @@ export default function Router() {
           element: null, // 팝업을 통해 구현하니까 null
         },
         {
-          path: routes.profilepick,
+          path: routes.profilePick,
           element: <ProfilePickPage />,
         },
         {
-          path: routes.videopick,
+          path: routes.videoPick,
           element: <VideoPickPage />,
         },
         {
