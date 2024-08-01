@@ -51,10 +51,10 @@ export default function Header() {
                 퀵 캐스팅
                 {isQuickcastingHover && (
                   <div className="absolute top-full left-0 bg-black text-white rounded-b-2xl border-t border-t-1 border-white shadow-lg p-4">
-                    <Link to={routes.profilepick} className="text-xs block hover:text-gray-400 py-1">
+                    <Link to={routes.profilePick} className="text-xs block hover:text-gray-400 py-1">
                       PROFILE PICK
                     </Link>
-                    <Link to={routes.videopick} className="text-xs block hover:text-gray-400 py-1">
+                    <Link to={routes.videoPick} className="text-xs block hover:text-gray-400 py-1">
                       VIDEO PICK
                     </Link>
                   </div>
