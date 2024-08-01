@@ -17,7 +17,7 @@ export default function LoginPopup({ isOpen, togglePopup }) {
       <div className="bg-white rounded-lg overflow-hidden shadow-lg w-3/4 h-3/4 flex relative">
         <button
           onClick={closePopup}
-          className="absolute top-2 right-2 text-gray-500 hover:text-gray-800"
+          className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl p-2"
         >
           &#x2715; {/* Unicode character for X */}
         </button>
