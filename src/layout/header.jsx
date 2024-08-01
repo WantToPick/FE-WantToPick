@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
 import logo from '../assets/images/header/logo.png';
 import { GoPerson } from 'react-icons/go';
-import LoginPopup from './_components/loginpopup'
+import LoginPopup from './_components/LoginPopup';
 import { routes } from '../constants/routes';
 
 export default function Header() {
