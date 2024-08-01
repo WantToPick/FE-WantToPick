@@ -5,6 +5,11 @@ import { routes } from '../constants/routes';
 
 import Header from '../layout/header';
 import HomePage from '../pages/home/page';
+import ProfilePickPage from '../pages/guickcasting/profilepick/page';
+import VideoPickPage from '../pages/guickcasting/videopick/page';
+import RecruitPage from '../pages/recruit/page';
+import CommunityPage from '../pages/community/page';
+
 
 export default function Router() {
   const elements = [
@@ -19,6 +24,22 @@ export default function Router() {
         {
           path: routes.login,
           element: null, // 팝업을 통해 구현하니까 null
+        },
+        {
+          path: routes.profilepick,
+          element: <ProfilePickPage />,
+        },
+        {
+          path: routes.videopick,
+          element: <VideoPickPage />,
+        },
+        {
+          path: routes.recruit,
+          element: <RecruitPage />,
+        },
+        {
+          path: routes.community,
+          element: <CommunityPage />,
         },
       ],
     },
