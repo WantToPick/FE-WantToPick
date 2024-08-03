@@ -6,13 +6,13 @@ export default function Section3() {
     return (
         <section className="py-16 px-32 bg-gradient-to-b from-[#F8F8FF] to-[#E0ECFF]">
             <div className="text-center mb-16">
-                <h2 className="text-3xl font-bold text-blue-600">PICK 순서</h2>
+                <h2 className="text-4xl font-bold">PICK 순서</h2>
                 <p className="text-xl text-gray-600">WANT TO PICK ? 어떻게 하지 ?</p>
             </div>
             <div className="flex justify-around items-start space-x-8">
                 <div className="bg-white rounded-3xl p-8 shadow-md w-80">
                     <div className="flex justify-center mb-4">
-                        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white text-lg font-bold">
+                        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#526DF8] text-white text-lg font-bold">
                             01
                         </div>
                     </div>
@@ -30,7 +30,7 @@ export default function Section3() {
                 </div>
                 <div className="bg-white rounded-3xl p-8 shadow-md w-80">
                     <div className="flex justify-center mb-4">
-                        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white text-lg font-bold">
+                        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#526DF8] text-white text-lg font-bold">
                             02
                         </div>
                     </div>
@@ -43,12 +43,12 @@ export default function Section3() {
                 </div>
                 <div className="bg-white rounded-3xl p-8 shadow-md w-80">
                     <div className="flex justify-center mb-4">
-                        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 text-white text-lg font-bold">
+                        <div className="flex items-center justify-center w-10 h-10 rounded-full bg-[#526DF8] text-white text-lg font-bold">
                             03
                         </div>
                     </div>
-                    <h3 className="text-xl font-bold text-center mb-4">나를 픽 !</h3>
-                    <div className="flex items-center justify-center h-32 border-2 border-dashed border-gray-300 rounded-md mb-2">
+                    <h3 className="text-xl font-bold text-center mb-4">소속사에서 나를 픽 !</h3>
+                    <div className="flex items-center justify-center h-32 rounded-md mb-2">
                         <img src={wtpLogo} alt="WTP Logo" className="h-24 w-24" />
                     </div>
                     <p className="text-center text-gray-500">우리 회사랑 너무 잘 맞을 거 같아요 !</p>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-scroll';
-import bannerImage from '../../../assets/images/home/logo.png';
+import bannerImage from '../../../assets/images/home/icon.png';
 
 export default function Section1() {
     return (
