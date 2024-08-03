@@ -3,9 +3,9 @@ import { Link } from 'react-scroll';
 import bannerImage from '../../../assets/images/home/logo.png';
 
 export default function Section1() {
-    return(
-        <section className='flex items-center justify-center bg-gradient-to-r from-[#FFEAEB] to-[#CEDAFF]/50 py-32'>
-            <div className='text-center'>
+    return (
+        <section className='flex flex-col items-center justify-center bg-gradient-to-r from-[#FFEAEB]/50 to-[#CEDAFF]/50 py-32'>
+            <div className='text-center mb-10'>
                 <div className='flex items-center justify-center mb-5'>
                     <div className='flex items-center text-2xl text-gray-700'>
                         <span className='font-semibold'>Pick</span>과 <span className='font-semibold ml-2'>Picker</span>의 만남
