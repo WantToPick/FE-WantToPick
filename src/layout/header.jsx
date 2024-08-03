@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
-import logo from '../assets/images/header/logo.png';
+import logo from '../assets/images/logo.png';
 import { GoPerson } from 'react-icons/go';
 import LoginPopup from './_components/loginPopup';
 import { routes } from '../constants/routes';
@@ -37,12 +37,24 @@ export default function Header() {
             <Link to={routes.home}>
               <img src={logo} alt="Logo" className="w-12 mr-8" />
             </Link>
-            <nav className="flex space-x-4">
+            <nav className="flex space-x-1">
               <Link
                 to={routes.home}
                 className="relative group text-black px-6 py-1 rounded-full hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
               >
                 HOME
+              </Link>
+              <Link
+                to={routes.trainingRoom}
+                className="relative group text-black px-6 py-1 rounded-full hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
+              >
+                트레이닝룸
+              </Link>
+              <Link
+                to={routes.recruit}
+                className="relative group text-black px-6 py-1 rounded-full hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
+              >
+                모집공고
               </Link>
               <div className="relative group text-black px-6 py-1 rounded-t-2xl hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
                 onMouseEnter={() => setIsQuickcastingHover(true)}
@@ -60,12 +72,6 @@ export default function Header() {
                   </div>
                 )}
               </div>
-              <Link
-                to={routes.recruit}
-                className="relative group text-black px-6 py-1 rounded-full hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
-              >
-                모집공고
-              </Link>
               <Link
                 to={routes.community}
                 className="relative group text-black px-6 py-1 rounded-full hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
