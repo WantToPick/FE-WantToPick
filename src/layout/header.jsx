@@ -89,9 +89,7 @@ export default function Header() {
         </div>
         <LoginPopup isOpen={isPopupOpen} togglePopup={togglePopup} />
       </header>
-      <div className="pt-[60px]">
-        <Outlet />
-      </div>
+      <div className="pt-[60px]"></div>
     </>
   );
 }
