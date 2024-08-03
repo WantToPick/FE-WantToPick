@@ -44,6 +44,18 @@ export default function Header() {
               >
                 HOME
               </Link>
+              <Link
+                to={routes.trainingRoom}
+                className="relative group text-black px-6 py-1 rounded-full hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
+              >
+                트레이닝룸
+              </Link>
+              <Link
+                to={routes.recruit}
+                className="relative group text-black px-6 py-1 rounded-full hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
+              >
+                모집공고
+              </Link>
               <div className="relative group text-black px-6 py-1 rounded-t-2xl hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
                 onMouseEnter={() => setIsQuickcastingHover(true)}
                 onMouseLeave={() => setIsQuickcastingHover(false)}
@@ -60,12 +72,6 @@ export default function Header() {
                   </div>
                 )}
               </div>
-              <Link
-                to={routes.recruit}
-                className="relative group text-black px-6 py-1 rounded-full hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
-              >
-                모집공고
-              </Link>
               <Link
                 to={routes.community}
                 className="relative group text-black px-6 py-1 rounded-full hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
