@@ -1,8 +1,10 @@
+import React from 'react';
+import { Link } from 'react-scroll';
 import bannerImage from '../../../assets/images/home/logo.png';
 
 export default function Section1() {
     return(
-        <section className='flex items-center justify-center bg-gradient-to-r from-[#FFEAEB] to-[#CEDAFF] py-20'>
+        <section className='flex items-center justify-center bg-gradient-to-r from-[#FFEAEB] to-[#CEDAFF]/50 py-32'>
             <div className='text-center'>
                 <div className='flex items-center justify-center mb-5'>
                     <div className='flex items-center text-2xl text-gray-700'>
@@ -19,6 +21,13 @@ export default function Section1() {
                         <p className='text-gray-500'>나는 너를 픽하길 원해: 원투픽</p>
                     </div>
                 </div>
+            </div>
+            <div className='mt-10'>
+                <Link to="section2" smooth={true} duration={500} className="cursor-pointer">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                    </svg>
+                </Link>
             </div>
         </section>
     );
