@@ -37,7 +37,7 @@ export default function Header() {
             <Link to={routes.home}>
               <img src={logo} alt="Logo" className="w-12 mr-8" />
             </Link>
-            <nav className="flex space-x-4">
+            <nav className="flex space-x-1">
               <Link
                 to={routes.home}
                 className="relative group text-black px-6 py-1 rounded-full hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
