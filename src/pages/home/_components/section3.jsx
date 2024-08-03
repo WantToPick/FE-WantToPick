@@ -39,13 +39,13 @@ export default function Section3() {
                         </div>
                         <h3 className="text-xl font-bold text-center mb-4">전문가에게 피드백 받기</h3>
                         <div className="text-left space-y-2">
-                            <div className="relative bg-blue-100 rounded-lg p-4 mb-2">
+                            <div className="relative bg-[#E0ECFF] rounded-lg p-4 mb-2">
                                 <p>조금 더 낮은 음악대의 노래가 좋을 거 같아요.</p>
-                                <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-full w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-r-8 border-r-blue-100"></div>
+                                <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-full w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-r-8 border-r-[#E0ECFF]"></div>
                             </div>
-                            <div className="relative bg-pink-100 rounded-lg p-4 mb-2">
+                            <div className="relative bg-[#FFEAEB] rounded-lg p-4 mb-2">
                                 <p>춤 연습을 조금 더 하면 실력을 늘 것 같네요!</p>
-                                <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-full w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-r-8 border-r-pink-100"></div>
+                                <div className="absolute top-1/2 left-0 transform -translate-y-1/2 -translate-x-full w-0 h-0 border-t-8 border-t-transparent border-b-8 border-b-transparent border-r-8 border-r-[#FFEAEB]"></div>
                             </div>
                             <div className="relative bg-gray-100 rounded-lg p-4">
                                 <p>충분한 끼가 있고 소질이 있네요 :)</p>
