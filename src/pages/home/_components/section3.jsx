@@ -23,7 +23,7 @@ export default function Section3() {
                             <p className="mb-2"><strong>키 / 체중 :</strong> 160cm / 40kg</p>
                             <p className="mb-2"><strong>특기 :</strong> 보컬</p>
                             <p className="mb-2"><strong>자기소개 :</strong></p>
-                            <div className="flex items-start justify-start mt-7">
+                            <div className="flex items-start justify-start mt-2">
                                 <img src={profileImage} alt="Profile Placeholder" className="w-36" />
                             </div>
                             <p className="text-gray-500 text-right">보컬/랩/댄스</p>
