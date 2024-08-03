@@ -4,7 +4,7 @@ import bannerImage from '../../../assets/images/home/icon.png';
 
 export default function Section1() {
     return (
-        <section className='flex flex-col items-center justify-center bg-gradient-to-r from-[#FFEAEB]/50 to-[#CEDAFF]/50 py-32'>
+        <section className='flex flex-col items-center justify-center bg-gradient-to-r from-[#FFEAEB]/50 to-[#CEDAFF]/50 pt-28 pb-8'>
             <div className='text-center mb-10'>
                 <div className='flex items-center justify-center mb-5'>
                     <div className='flex items-center text-2xl text-gray-700'>
