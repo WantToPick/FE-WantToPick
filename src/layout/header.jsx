@@ -31,7 +31,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="bg-white text-black shadow-md fixed w-full z-50">
+      <header className="bg-white text-black shadow-md fixed w-full h-[60px] z-50">
         <div className="container mx-auto px-4 py-3 flex justify-between items-center">
           <div className="flex items-center">
             <Link to={routes.home}>
@@ -89,7 +89,7 @@ export default function Header() {
         </div>
         <LoginPopup isOpen={isPopupOpen} togglePopup={togglePopup} />
       </header>
-      <div className="pt-20">
+      <div className="pt-[60px]">
         <Outlet />
       </div>
     </>
