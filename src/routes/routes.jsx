@@ -5,7 +5,7 @@ import { routes } from '../constants/routes';
 
 import Header from '../layout/header';
 import HomePage from '../pages/home/page';
-import trainingRoomPage from '../pages/trainingRoom/page';
+import TrainingRoomPage from '../pages/trainingRoom/page';
 import ProfilePickPage from '../pages/guickCasting/profilePick/page';
 import VideoPickPage from '../pages/guickCasting/videoPick/page';
 import RecruitPage from '../pages/recruit/page';
@@ -28,7 +28,7 @@ export default function Router() {
         },
         {
           path: routes.trainingRoom,
-          element: <trainingRoomPage />,
+          element: <TrainingRoomPage />,
         },
         {
           path: routes.recruit,
