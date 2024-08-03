@@ -1,13 +1,12 @@
 import React from 'react';
-import shieldIcon from '../../../assets/images/home/security.png'; // 방패 아이콘 이미지 경로
-import logoImage from '../../../assets/images/logo.png'; // 로고 이미지 경로
+import sercurity from '../../../assets/images/home/security.png';
 
 export default function Section4() {
     return (
         <section className="py-32 px-44 bg-gradient-to-b from-[#FFEAEB] to-white mt-10">
             <div className="container mx-auto flex items-center">
                 <div className="w-1/2 relative">
-                    <img src={shieldIcon} alt="Shield Icon"/>
+                    <img src={sercurity} alt="Sercurity Image" className='w-[520px]'/>
                 </div>
                 <div className="w-1/2 pl-16">
                     <h2 className="text-4xl font-bold mb-4">Picker’s 엔터테인먼트 기업 <br></br> 완전인증</h2>
