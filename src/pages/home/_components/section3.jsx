@@ -1,6 +1,6 @@
 import React from 'react';
-import profileImage from '../../../assets/images/home/logo.png';
-import wtpLogo from '../../../assets/images/home/logo.png';
+import profileImage from '../../../assets/images/logo.png';
+import wtpLogo from '../../../assets/images/logo.png';
 
 export default function Section3() {
     return (
@@ -49,7 +49,7 @@ export default function Section3() {
                     </div>
                     <h3 className="text-xl font-bold text-center mb-4">소속사에서 나를 픽 !</h3>
                     <div className="flex items-center justify-center h-32 rounded-md mb-2">
-                        <img src={wtpLogo} alt="WTP Logo" className="h-24 w-24" />
+                        <img src={wtpLogo} alt="WTP Logo" className="w-24" />
                     </div>
                     <p className="text-center text-gray-500">우리 회사랑 너무 잘 맞을 거 같아요 !</p>
                 </div>
