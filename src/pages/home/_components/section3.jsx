@@ -1,10 +1,10 @@
 import React from 'react';
-import profileImage from '../../../assets/images/logo.png';
+import profileImage from '../../../assets/images/home/person.png';
 import wtpLogo from '../../../assets/images/logo.png';
 
 export default function Section3() {
     return (
-        <section className="py-16 px-32 bg-gradient-to-b from-[#F8F8FF] to-[#E0ECFF]">
+        <section className="py-32 px-32 bg-gradient-to-b from-white to-[#E0ECFF]">
             <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold">PICK 순서</h2>
                 <p className="text-xl text-gray-600">WANT TO PICK ? 어떻게 하지 ?</p>
@@ -23,10 +23,10 @@ export default function Section3() {
                             <p className="mb-2"><strong>키 / 체중 :</strong> 160cm / 40kg</p>
                             <p className="mb-2"><strong>특기 :</strong> 보컬</p>
                             <p className="mb-2"><strong>자기소개 :</strong></p>
-                            <div className="flex items-center justify-center h-32 border-2 border-dashed border-gray-300 rounded-md mb-2">
-                                <img src={profileImage} alt="Profile Placeholder" className="h-24 w-24" />
+                            <div className="flex items-start justify-start mt-7">
+                                <img src={profileImage} alt="Profile Placeholder" className="w-36" />
                             </div>
-                            <p className="text-gray-500">보컬/랩/댄스</p>
+                            <p className="text-gray-500 text-right">보컬/랩/댄스</p>
                         </div>
                     </div>
                 </div>
@@ -53,7 +53,7 @@ export default function Section3() {
                             </div>
                         </div>
                         <h3 className="text-xl font-bold text-center mb-4">소속사에서 나를 픽 !</h3>
-                        <div className="flex items-center justify-center h-32 rounded-md mb-2">
+                        <div className="flex items-start justify-start h-32 rounded-md mb-2">
                             <img src={wtpLogo} alt="WTP Logo" className="w-24" />
                         </div>
                         <p className="text-center text-gray-500">우리 회사랑 너무 잘 맞을 거 같아요 !</p>

@@ -1,6 +1,6 @@
 export default function Section2() {
     return (
-        <section className="py-16 px-32 bg-white">
+        <section className="py-32 px-32 bg-white">
             <div className="text-left mb-8">
                 <h2 className="text-4xl font-bold">Training Room</h2>
             </div>
