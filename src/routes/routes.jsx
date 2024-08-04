@@ -4,12 +4,13 @@ import { routes } from '../constants/routes';
 
 import Layout from '../layout/layout';
 import HomePage from '../pages/home/page';
-import TrainingRoomPage from '../pages/trainingRoom/page';
+import VocalTrainingPage from '../pages/trainingRoom/vocalTraining/page';
+import DanceTrainingPage from '../pages/trainingRoom/danceTraining/page';
 import ProfilePickPage from '../pages/guickCasting/profilePick/page';
 import VideoPickPage from '../pages/guickCasting/videoPick/page';
 import RecruitPage from '../pages/recruit/page';
-import CommunityPage from '../pages/community/page';
-
+import FreeBoardPage from '../pages/community/freeBoard/page';
+import TeamRecruitPage from '../pages/community/teamRecruit/page';
 export default function Router() {
   const elements = [
     {
@@ -25,8 +26,12 @@ export default function Router() {
           element: null, // 팝업을 통해 구현하니까 null
         },
         {
-          path: routes.trainingRoom,
-          element: <TrainingRoomPage />,
+          path: routes.vocalTraining,
+          element: <VocalTrainingPage />,
+        },
+        {
+          path: routes.danceTraining,
+          element: <DanceTrainingPage />,
         },
         {
           path: routes.recruit,
@@ -41,8 +46,12 @@ export default function Router() {
           element: <VideoPickPage />,
         },
         {
-          path: routes.community,
-          element: <CommunityPage />,
+          path: routes.freeBoard,
+          element: <FreeBoardPage />,
+        },
+        {
+          path: routes.teamRecruit,
+          element: <TeamRecruitPage />,
         },
       ],
     },
