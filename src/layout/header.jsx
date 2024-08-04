@@ -8,7 +8,10 @@ import { routes } from '../constants/routes';
 export default function Header() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isTrainingRoomHover, setIsTrainingRoomHover] = useState(false);
   const [isQuickcastingHover, setIsQuickcastingHover] = useState(false);
+  const [isCommunityHover, setIsCommunityHover] = useState(false);
+
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -44,12 +47,22 @@ export default function Header() {
               >
                 HOME
               </Link>
-              <Link
-                to={routes.trainingRoom}
-                className="relative group text-black px-6 py-1 rounded-full hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
+              <div className="relative group text-black px-6 py-1 rounded-t-2xl hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
+                onMouseEnter={() => setIsTrainingRoomHover(true)}
+                onMouseLeave={() => setIsTrainingRoomHover(false)}
               >
                 트레이닝룸
-              </Link>
+                {isTrainingRoomHover && (
+                  <div className="absolute top-full left-0 bg-black text-white rounded-b-2xl border-t border-t-1 border-white shadow-lg p-4 w-[117px] text-center">
+                    <Link to={routes.vocalTraining} className="text-sm block hover:text-gray-400 py-1">
+                      보컬 트레이닝
+                    </Link>
+                    <Link to={routes.danceTraining} className="text-sm block hover:text-gray-400 py-1">
+                      댄스 트레이닝
+                    </Link>
+                  </div>
+                )}
+              </div>
               <Link
                 to={routes.recruit}
                 className="relative group text-black px-6 py-1 rounded-full hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
@@ -62,22 +75,32 @@ export default function Header() {
               >
                 퀵 캐스팅
                 {isQuickcastingHover && (
-                  <div className="absolute top-full left-0 bg-black text-white rounded-b-2xl border-t border-t-1 border-white shadow-lg p-4">
-                    <Link to={routes.profilePick} className="text-xs block hover:text-gray-400 py-1">
-                      PROFILE PICK
+                  <div className="absolute top-full left-0 bg-black text-white rounded-b-2xl border-t border-t-1 border-white shadow-lg p-4 w-[107px] text-center">
+                    <Link to={routes.profilePick} className="text-sm block hover:text-gray-400 py-1">
+                      프로필 PICK
                     </Link>
-                    <Link to={routes.videoPick} className="text-xs block hover:text-gray-400 py-1">
-                      VIDEO PICK
+                    <Link to={routes.videoPick} className="text-sm block hover:text-gray-400 py-1">
+                      비디오 PICK
                     </Link>
                   </div>
                 )}
               </div>
-              <Link
-                to={routes.community}
-                className="relative group text-black px-6 py-1 rounded-full hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
+              <div className="relative group text-black px-6 py-1 rounded-t-2xl hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
+                onMouseEnter={() => setIsCommunityHover(true)}
+                onMouseLeave={() => setIsCommunityHover(false)}
               >
                 커뮤니티
-              </Link>
+                {isCommunityHover && (
+                  <div className="absolute top-full left-0 bg-black text-white rounded-b-2xl border-t border-t-1 border-white shadow-lg p-4 w-[103.5px] text-center">
+                    <Link to={routes.freeBoard} className="text-sm block hover:text-gray-400 py-1">
+                      자유게시판
+                    </Link>
+                    <Link to={routes.teamRecruit} className="text-sm block hover:text-gray-400 py-1">
+                      팀 모집
+                    </Link>
+                  </div>
+                )}
+              </div>
             </nav>
           </div>
           <div className="flex items-center space-x-4 relative">
