@@ -4,7 +4,7 @@ import { routes } from '../constants/routes';
 
 import Layout from '../layout/layout';
 import HomePage from '../pages/home/page';
-import SignInPage from '../pages/auth/singin/singin';
+import SignUpPage from '../pages/auth/signUp/page';
 import VocalTrainingPage from '../pages/trainingRoom/vocalTraining/page';
 import DanceTrainingPage from '../pages/trainingRoom/danceTraining/page';
 import ProfilePickPage from '../pages/guickCasting/profilePick/page';
@@ -28,7 +28,7 @@ export default function Router() {
         },
         {
           path: routes.signin,
-          element: <SignInPage />,
+          element: <SignUpPage />,
         },
         {
           path: routes.vocalTraining,

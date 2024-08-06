@@ -1,4 +1,4 @@
-export default function SignInPage() {
+export default function SignUpPage() {
     return(
         <div>
             회원가입 페이지
