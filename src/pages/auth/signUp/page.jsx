@@ -1,7 +1,9 @@
+import SignUpForm from "./signUpForm";
+
 export default function SignUpPage() {
     return(
-        <div>
-            회원가입 페이지
+        <div className="container mx-auto p-4">
+            <SignUpForm />
         </div>
     );
 }
