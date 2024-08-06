@@ -27,7 +27,7 @@ export default function Router() {
           element: null, // 팝업을 통해 구현하니까 null
         },
         {
-          path: routes.signin,
+          path: routes.signUp,
           element: <SignUpPage />,
         },
         {
