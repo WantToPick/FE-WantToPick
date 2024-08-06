@@ -5,6 +5,7 @@ import Step3 from './_component/step3';
 import Step4 from './_component/step4';
 import Step5 from './_component/step5';
 import Step6 from './_component/step6';
+import logoImg from '../../../assets/images/logo.png';
 
 const SignupForm = () => {
   const [step, setStep] = useState(1);
@@ -45,11 +46,19 @@ const SignupForm = () => {
   };
 
   return (
-    <div className="w-full max-w-md mx-auto mt-8 p-4 border rounded-lg shadow-lg">
-      <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4">
-        <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: `${(step / 6) * 100}%` }}></div>
+    <div className="flex flex-col items-center mt-10">
+      <img src={logoImg} alt="로고" className="my-4 w-16" />
+      <h1 className="text-2xl font-bold mb-2">회원가입</h1>
+      <p className="text-sm text-gray-500 mb-8">원투픽에 오신 걸 환영합니다!</p>
+      <div className="w-full max-w-md p-16 bg-white border border-gray-300 rounded-2xl">
+        <div className="flex justify-between items-center mb-1">
+          <span className="text-xs font-medium text-gray-500">{step}/6</span>
+        </div>
+        <div className="w-full bg-gray-200 rounded-full h-2.5 mb-4">
+          <div className="bg-blue-600 h-2.5 rounded-full" style={{ width: `${(step / 6) * 100}%` }}></div>
+        </div>
+        {renderStep()}
       </div>
-      {renderStep()}
     </div>
   );
 };
