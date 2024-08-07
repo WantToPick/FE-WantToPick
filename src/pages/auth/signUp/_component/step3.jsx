@@ -28,12 +28,12 @@ const Step3 = ({ nextStep, prevStep }) => {
 
   const handleUsernameChange = (e) => {
     setUsername(e.target.value);
-    setUsernameValid(true); // 입력할 때마다 유효성 검사 메시지를 숨깁니다.
+    setUsernameValid(true);
   };
 
   const handlePasswordChange = (e) => {
     setPassword(e.target.value);
-    setPasswordValid(true); // 입력할 때마다 유효성 검사 메시지를 숨깁니다.
+    setPasswordValid(true);
   };
 
   return (
