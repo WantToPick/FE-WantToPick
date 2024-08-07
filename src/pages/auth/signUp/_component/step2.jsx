@@ -13,7 +13,10 @@ const Step2 = ({ nextStep, prevStep }) => {
 
   return (
     <div className="step">
-      <h2 className="text-xl font-bold mb-4">이메일을 입력하세요.</h2>
+      <div className="w-full text-left">
+        <h2 className="text-lg font-bold my-1">이메일을 입력하세요.</h2>
+        <p className="text-sm text-gray-500 mb-4">원활한 캐스팅을 위해 정확한 정보를 입력해주세요.</p>
+      </div>
       <input
         type="email"
         placeholder="ex. abc1234@naver.com"
