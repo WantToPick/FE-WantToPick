@@ -50,7 +50,7 @@ const SignupForm = () => {
       <img src={logoImg} alt="로고" className="my-3 w-16" />
       <h1 className="text-2xl font-bold mb-2">회원가입</h1>
       <p className="text-base text-gray-500 mb-8">원투픽에 오신 걸 환영합니다!</p>
-      <div className="w-full max-w-md p-16 bg-white border border-gray-300 rounded-2xl">
+      <div className="w-full max-w-xl p-16 bg-white border border-gray-300 rounded-2xl">
         <div className="flex justify-between items-center mb-1">
           <span className="text-xs font-medium text-gray-500">{step}/6</span>
         </div>
