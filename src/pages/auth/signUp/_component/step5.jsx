@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { AiOutlineCheck } from 'react-icons/ai';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 const Step5 = ({ nextStep, prevStep }) => {
