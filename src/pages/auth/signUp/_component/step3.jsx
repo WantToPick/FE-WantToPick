@@ -14,7 +14,10 @@ const Step3 = ({ nextStep, prevStep }) => {
 
   return (
     <div className="step">
-      <h2 className="text-xl font-bold mb-4">아이디와 비밀번호를 설정하세요.</h2>
+      <div className="w-full text-left">
+        <h2 className="text-lg font-bold my-1">아이디와 비밀번호를 설정하세요.</h2>
+        <p className="text-sm text-gray-500 mb-4">원활한 캐스팅을 위해 정확한 정보를 입력해주세요.</p>
+      </div>
       <input
         type="text"
         placeholder="아이디"
