@@ -25,27 +25,47 @@ const Step4 = ({ nextStep, prevStep }) => {
         <p className="text-sm text-gray-500 mb-4">원활한 캐스팅을 위해 정확한 정보를 입력해주세요.</p>
       </div>
       <div className="flex justify-center gap-4 mb-4">
-        <div>
+        <div className="flex items-center">
           <input
             type="radio"
             id="male"
             name="gender"
             value="남자"
             onChange={handleGenderChange}
-            className="mr-2"
+            className="hidden"
           />
-          <label htmlFor="male">남자</label>
+          <label
+            htmlFor="male"
+            className={`flex items-center cursor-pointer ${gender === '남자' ? 'text-[#526DF8]' : 'text-gray-700'}`}
+          >
+            <span
+              className={`w-4 h-4 inline-block mr-2 border rounded-full flex items-center justify-center ${gender === '남자' ? 'border-[#526DF8]' : 'border-gray-300'}`}
+            >
+              {gender === '남자' && <span className="w-2 h-2 bg-[#526DF8] rounded-full"></span>}
+            </span>
+            남자
+          </label>
         </div>
-        <div>
+        <div className="flex items-center">
           <input
             type="radio"
             id="female"
             name="gender"
             value="여자"
             onChange={handleGenderChange}
-            className="mr-2"
+            className="hidden"
           />
-          <label htmlFor="female">여자</label>
+          <label
+            htmlFor="female"
+            className={`flex items-center cursor-pointer ${gender === '여자' ? 'text-[#526DF8]' : 'text-gray-700'}`}
+          >
+            <span
+              className={`w-4 h-4 inline-block mr-2 border rounded-full flex items-center justify-center ${gender === '여자' ? 'border-[#526DF8]' : 'border-gray-300'}`}
+            >
+              {gender === '여자' && <span className="w-2 h-2 bg-[#526DF8] rounded-full"></span>}
+            </span>
+            여자
+          </label>
         </div>
       </div>
 
