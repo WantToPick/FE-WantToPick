@@ -22,7 +22,7 @@ const Step2 = ({ nextStep, prevStep }) => {
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
-    setIsEmailValid(true);  // 이메일을 입력할 때마다 유효성 검사 메시지를 숨깁니다.
+    setIsEmailValid(true);
   };
 
   return (
