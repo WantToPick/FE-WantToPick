@@ -7,11 +7,16 @@ const Step5 = ({ nextStep, prevStep }) => {
   const [birthdateValid, setBirthdateValid] = useState(true);
 
   const handleNext = () => {
-    if (birthdate) {
+    if (birthdate && validateDate(birthdate)) {
       nextStep();
     } else {
       setBirthdateValid(false);
     }
+  };
+
+  const validateDate = (date) => {
+    const re = /^\d{4}-\d{2}-\d{2}$/;
+    return re.test(date);
   };
 
   const handleBirthdateChange = (e) => {
@@ -28,7 +33,6 @@ const Step5 = ({ nextStep, prevStep }) => {
       <div className="relative w-full mb-1">
         <input
           type="date"
-          placeholder="ex. 2002-08-01"
           value={birthdate}
           onChange={handleBirthdateChange}
           onFocus={() => setIsFocused(true)}
@@ -38,7 +42,7 @@ const Step5 = ({ nextStep, prevStep }) => {
         />
       </div>
 
-      {!birthdateValid && <p className="text-red-500 text-sm mt-1">생년월일을 입력하세요.</p>}
+      {!birthdateValid && <p className="text-red-500 text-sm mt-1">생년월일을 형식에 맞게 입력하세요.</p>}
       <div className="flex justify-between mt-6">
         <button onClick={prevStep} className="flex items-center bg-white text-gray-400">
           <IoIosArrowBack className="mr-2" />

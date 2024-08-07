@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 const Step6 = ({ prevStep }) => {
   const [gender, setGender] = useState('');
@@ -13,7 +14,10 @@ const Step6 = ({ prevStep }) => {
 
   return (
     <div className="step">
-      <h2 className="text-xl font-bold mb-4">성별을 알려주세요.</h2>
+      <div className="w-full text-left">
+        <h2 className="text-lg font-bold my-1">성별을 선택하세요.</h2>
+        <p className="text-sm text-gray-500 mb-4">원활한 캐스팅을 위해 정확한 정보를 입력해주세요.</p>
+      </div>
       <div className="flex justify-center gap-4 mb-4">
         <div>
           <input
@@ -38,9 +42,17 @@ const Step6 = ({ prevStep }) => {
           <label htmlFor="female">여자</label>
         </div>
       </div>
-      <div className="flex justify-between">
-        <button onClick={prevStep} className="px-4 py-2 bg-gray-300 rounded">이전</button>
-        <button onClick={handleNext} className="px-4 py-2 bg-blue-500 text-white rounded">완료</button>
+
+      {!gender && <p className="text-red-500 text-sm mt-1">성별을 선택하세요.</p>}
+      <div className="flex justify-between mt-6">
+        <button onClick={prevStep} className="flex items-center bg-white text-gray-400">
+          <IoIosArrowBack className="mr-2" />
+          이전
+        </button>
+        <button onClick={handleNext} className={`flex items-center ${gender ? 'bg-white text-[#526DF8]' : 'bg-white text-gray-300'}`}>
+          완료
+          <IoIosArrowForward className="ml-2" />
+        </button>
       </div>
     </div>
   );
