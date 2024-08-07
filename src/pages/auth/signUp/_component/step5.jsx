@@ -1,54 +1,58 @@
 import React, { useState } from 'react';
+import { AiOutlineCheck } from 'react-icons/ai';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
 
 const Step5 = ({ nextStep, prevStep }) => {
-  const [birthdate, setBirthdate] = useState('');
+  const [email, setEmail] = useState('');
   const [isFocused, setIsFocused] = useState(false);
-  const [birthdateValid, setBirthdateValid] = useState(true);
+  const [isEmailValid, setIsEmailValid] = useState(true);
 
   const handleNext = () => {
-    if (birthdate && validateDate(birthdate)) {
+    if (validateEmail(email)) {
       nextStep();
     } else {
-      setBirthdateValid(false);
+      setIsEmailValid(false);
     }
   };
 
-  const validateDate = (date) => {
-    const re = /^\d{4}-\d{2}-\d{2}$/;
-    return re.test(date);
+  const validateEmail = (email) => {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return re.test(String(email).toLowerCase());
   };
 
-  const handleBirthdateChange = (e) => {
-    setBirthdate(e.target.value);
-    setBirthdateValid(true);
+  const handleEmailChange = (e) => {
+    setEmail(e.target.value);
+    setIsEmailValid(true);
   };
 
   return (
     <div className="step">
       <div className="w-full text-left">
-        <h2 className="text-lg font-bold my-1">생년월일을 입력하세요.</h2>
+        <h2 className="text-lg font-bold my-1">이메일을 입력하세요.</h2>
         <p className="text-sm text-gray-500 mb-4">원활한 캐스팅을 위해 정확한 정보를 입력해주세요.</p>
       </div>
       <div className="relative w-full mb-1">
         <input
-          type="date"
-          value={birthdate}
-          onChange={handleBirthdateChange}
+          type="email"
+          placeholder="ex. abc1234@naver.com"
+          value={email}
+          onChange={handleEmailChange}
           onFocus={() => setIsFocused(true)}
           onBlur={() => setIsFocused(false)}
-          className={`px-4 py-2 border rounded-xl w-full ${isFocused ? 'border-2 border-gray-400' : 'border-gray-300'}`}
+          className={`px-4 py-2 border rounded-xl w-full ${isFocused ? 'border-2 border-[#526DF8]' : 'border-gray-300'}`}
           style={{ outline: 'none' }}
         />
+        <div className="absolute inset-y-0 right-0 flex items-center pr-3">
+          <AiOutlineCheck className={validateEmail(email) ? 'text-[#526DF8]' : 'text-gray-300'} size={20} />
+        </div>
       </div>
-
-      {!birthdateValid && <p className="text-red-500 text-sm mt-1">생년월일을 형식에 맞게 입력하세요.</p>}
+      {!isEmailValid && <p className="text-red-500 text-sm mt-1">올바른 이메일 형식을 입력하세요.</p>}
       <div className="flex justify-between mt-6">
         <button onClick={prevStep} className="flex items-center bg-white text-gray-400">
           <IoIosArrowBack className="mr-2" />
           이전
         </button>
-        <button onClick={handleNext} className={`flex items-center ${birthdate ? 'bg-white text-[#526DF8]' : 'bg-white text-gray-300'}`}>
+        <button onClick={handleNext} className={`flex items-center ${validateEmail(email) ? 'bg-white text-[#526DF8]' : 'bg-white text-gray-300'}`}>
           다음
           <IoIosArrowForward className="ml-2" />
         </button>
