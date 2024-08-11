@@ -4,6 +4,7 @@ import { routes } from '../constants/routes';
 
 import Layout from '../layout/layout';
 import HomePage from '../pages/home/page';
+import SignUpPage from '../pages/auth/signUp/page';
 import VocalTrainingPage from '../pages/trainingRoom/vocalTraining/page';
 import DanceTrainingPage from '../pages/trainingRoom/danceTraining/page';
 import ProfilePickPage from '../pages/guickCasting/profilePick/page';
@@ -24,6 +25,10 @@ export default function Router() {
         {
           path: routes.login,
           element: null, // 팝업을 통해 구현하니까 null
+        },
+        {
+          path: routes.signUp,
+          element: <SignUpPage />,
         },
         {
           path: routes.vocalTraining,

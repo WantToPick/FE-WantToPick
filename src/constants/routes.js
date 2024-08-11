@@ -1,7 +1,7 @@
 export const routes = {
 	home: '/',
 	login: '/login',
-	signin: '/signin',
+	signUp: '/sign_up',
 	vocalTraining: '/vocal_training',
 	danceTraining: '/dance_training',
 	recruit: '/recruit',
