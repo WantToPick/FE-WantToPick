@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AiOutlineCheck } from 'react-icons/ai';
 import { IoIosArrowBack, IoIosArrowForward } from 'react-icons/io';
+import { useNavigate } from 'react-router-dom';
 
 const Step6 = ({ prevStep }) => {
   const [username, setUsername] = useState('');
@@ -8,10 +9,12 @@ const Step6 = ({ prevStep }) => {
   const [focusedInput, setFocusedInput] = useState('');
   const [usernameValid, setUsernameValid] = useState(true);
   const [passwordValid, setPasswordValid] = useState(true);
+  const navigate = useNavigate();
 
   const handleNext = () => {
     if (validateUsername(username) && validatePassword(password)) {
       alert('회원가입 성공!');
+      navigate('/login');
     } else {
       if (!validateUsername(username)) setUsernameValid(false);
       if (!validatePassword(password)) setPasswordValid(false);
