@@ -9,7 +9,6 @@ export default function Header() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [isTrainingRoomHover, setIsTrainingRoomHover] = useState(false);
-  const [isQuickcastingHover, setIsQuickcastingHover] = useState(false);
   const [isCommunityHover, setIsCommunityHover] = useState(false);
 
   const navigate = useNavigate();
@@ -69,22 +68,6 @@ export default function Header() {
               >
                 모집공고
               </Link>
-              <div className="relative group text-black px-6 py-1 rounded-t-2xl hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
-                onMouseEnter={() => setIsQuickcastingHover(true)}
-                onMouseLeave={() => setIsQuickcastingHover(false)}
-              >
-                퀵 캐스팅
-                {isQuickcastingHover && (
-                  <div className="absolute top-full left-0 bg-black text-white rounded-b-2xl border-t border-t-1 border-white shadow-lg p-4 w-[107px] text-center">
-                    <Link to={routes.profilePick} className="text-sm block hover:text-gray-400 py-1">
-                      프로필 PICK
-                    </Link>
-                    <Link to={routes.videoPick} className="text-sm block hover:text-gray-400 py-1">
-                      비디오 PICK
-                    </Link>
-                  </div>
-                )}
-              </div>
               <div className="relative group text-black px-6 py-1 rounded-t-2xl hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
                 onMouseEnter={() => setIsCommunityHover(true)}
                 onMouseLeave={() => setIsCommunityHover(false)}
