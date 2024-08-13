@@ -7,8 +7,6 @@ import HomePage from '../pages/home/page';
 import SignUpPage from '../pages/auth/signUp/page';
 import VocalTrainingPage from '../pages/trainingRoom/vocalTraining/page';
 import DanceTrainingPage from '../pages/trainingRoom/danceTraining/page';
-import ProfilePickPage from '../pages/guickCasting/profilePick/page';
-import VideoPickPage from '../pages/guickCasting/videoPick/page';
 import RecruitPage from '../pages/recruit/page';
 import FreeBoardPage from '../pages/community/freeBoard/page';
 import TeamRecruitPage from '../pages/community/teamRecruit/page';
@@ -41,14 +39,6 @@ export default function Router() {
         {
           path: routes.recruit,
           element: <RecruitPage />,
-        },
-        {
-          path: routes.profilePick,
-          element: <ProfilePickPage />,
-        },
-        {
-          path: routes.videoPick,
-          element: <VideoPickPage />,
         },
         {
           path: routes.freeBoard,
