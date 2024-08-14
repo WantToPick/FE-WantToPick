@@ -15,11 +15,18 @@ export default function Header() {
   const location = useLocation();
 
   const togglePopup = () => {
-    setIsPopupOpen(!isPopupOpen);
-    if (!isPopupOpen) {
-      navigate('/login');
+    if (isLoggedIn) {
+      // 로그아웃 로직
+      setIsLoggedIn(false);
+      navigate(location.pathname);  // 현재 페이지를 그대로 유지
     } else {
-      navigate(location.pathname.split('/login')[0]);
+      // 로그인 팝업 열기/닫기 로직
+      setIsPopupOpen(!isPopupOpen);
+      if (!isPopupOpen) {
+        navigate('/login');
+      } else {
+        navigate(location.pathname.split('/login')[0]);
+      }
     }
   };
 
