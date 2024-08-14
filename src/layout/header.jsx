@@ -93,7 +93,7 @@ export default function Header() {
             </button>
           </div>
         </div>
-        <LoginPopup isOpen={isPopupOpen} togglePopup={togglePopup} />
+        <LoginPopup isOpen={isPopupOpen} togglePopup={togglePopup} setIsLoggedIn={setIsLoggedIn} />
       </header>
       <div className="pt-[60px]"></div>
     </>
