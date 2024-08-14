@@ -1,42 +1,26 @@
-import React, { useEffect, useState } from 'react';
-import { Outlet, Link, useNavigate, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Outlet, Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import { GoPerson } from 'react-icons/go';
 import LoginPopup from './_components/loginPopup';
 import { routes } from '../constants/routes';
+import { useAuth } from './_hooks/useAuth';
+import { usePopup } from './_hooks/usePopup';
 
 export default function Header() {
-  const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const { isLoggedIn, login, logout } = useAuth();
+  const { isPopupOpen, togglePopup } = usePopup();
+
   const [isTrainingRoomHover, setIsTrainingRoomHover] = useState(false);
   const [isCommunityHover, setIsCommunityHover] = useState(false);
 
-  const navigate = useNavigate();
-  const location = useLocation();
-
-  const togglePopup = () => {
+  const handleButtonClick = () => {
     if (isLoggedIn) {
-      // 로그아웃 로직
-      setIsLoggedIn(false);
-      navigate(location.pathname);  // 현재 페이지를 그대로 유지
+      logout();  // 로그아웃 시 팝업을 열지 않음
     } else {
-      // 로그인 팝업 열기/닫기 로직
-      setIsPopupOpen(!isPopupOpen);
-      if (!isPopupOpen) {
-        navigate('/login');
-      } else {
-        navigate(location.pathname.split('/login')[0]);
-      }
+      togglePopup();  // 로그인 시 팝업 열기/닫기
     }
   };
-
-  useEffect(() => {
-    if (location.pathname.includes('/login')) {
-      setIsPopupOpen(true);
-    } else {
-      setIsPopupOpen(false);
-    }
-  }, [location]);
 
   return (
     <>
@@ -53,7 +37,8 @@ export default function Header() {
               >
                 HOME
               </Link>
-              <div className="relative group text-black px-6 py-1 rounded-t-2xl hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
+              <div
+                className="relative group text-black px-6 py-1 rounded-t-2xl hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
                 onMouseEnter={() => setIsTrainingRoomHover(true)}
                 onMouseLeave={() => setIsTrainingRoomHover(false)}
               >
@@ -75,7 +60,8 @@ export default function Header() {
               >
                 모집공고
               </Link>
-              <div className="relative group text-black px-6 py-1 rounded-t-2xl hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
+              <div
+                className="relative group text-black px-6 py-1 rounded-t-2xl hover:bg-black hover:text-white transition-all duration-200 ease-in-out"
                 onMouseEnter={() => setIsCommunityHover(true)}
                 onMouseLeave={() => setIsCommunityHover(false)}
               >
@@ -95,12 +81,12 @@ export default function Header() {
           </div>
           <div className="flex items-center space-x-4 relative">
             {isLoggedIn && <GoPerson className="text-2xl cursor-pointer" />}
-            <button onClick={togglePopup} className="hover:text-gray-700">
+            <button onClick={handleButtonClick} className="hover:text-gray-700">
               {isLoggedIn ? '로그아웃' : '로그인'}
             </button>
           </div>
         </div>
-        <LoginPopup isOpen={isPopupOpen} togglePopup={togglePopup} setIsLoggedIn={setIsLoggedIn} />
+        <LoginPopup isOpen={isPopupOpen} togglePopup={togglePopup} setIsLoggedIn={login} />
       </header>
       <div className="pt-[60px]"></div>
     </>
