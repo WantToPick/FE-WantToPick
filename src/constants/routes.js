@@ -7,4 +7,5 @@ export const routes = {
 	recruit: '/recruit',
 	freeBoard: '/free_board',
 	teamRecruit: '/team_recruit',
+	portfolio: '/portfolio',
 };

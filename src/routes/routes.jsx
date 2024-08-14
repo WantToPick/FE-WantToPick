@@ -10,6 +10,7 @@ import DanceTrainingPage from '../pages/trainingRoom/danceTraining/page';
 import RecruitPage from '../pages/recruit/page';
 import FreeBoardPage from '../pages/community/freeBoard/page';
 import TeamRecruitPage from '../pages/community/teamRecruit/page';
+import PortfolioPage from '../pages/portfolio/page';
 export default function Router() {
   const elements = [
     {
@@ -47,6 +48,10 @@ export default function Router() {
         {
           path: routes.teamRecruit,
           element: <TeamRecruitPage />,
+        },
+        {
+          path: routes.portfolio,
+          element: <PortfolioPage />,
         },
       ],
     },
