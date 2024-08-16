@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Outlet, Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
-import { GoPerson } from 'react-icons/go';
+import { FiUser, FiBell } from 'react-icons/fi'; // Feather 아이콘
 import LoginPopup from './_components/loginPopup';
 import { routes } from '../constants/routes';
 import { useAuth } from './_hooks/useAuth';
@@ -80,10 +80,22 @@ export default function Header() {
             </nav>
           </div>
           <div className="flex items-center space-x-4 relative">
-            {isLoggedIn && <GoPerson className="text-2xl cursor-pointer" />}
-            <button onClick={handleButtonClick} className="hover:text-gray-700">
-              {isLoggedIn ? '로그아웃' : '로그인'}
-            </button>
+            {isLoggedIn && (
+              <>
+                <FiBell className="text-xl cursor-pointer" />
+                <FiUser className="text-xl cursor-pointer" />
+                <button className="bg-[#526DF8] text-white px-5 py-1 rounded-md hover:bg-opacity-50">
+                  <Link to={routes.portfolio}>
+                    포트폴리오 +
+                  </Link>
+                </button>
+              </>
+            )}
+            {!isLoggedIn && (
+              <button onClick={handleButtonClick} className="hover:text-gray-700">
+                로그인
+              </button>
+            )}
           </div>
         </div>
         <LoginPopup isOpen={isPopupOpen} togglePopup={togglePopup} setIsLoggedIn={login} />
