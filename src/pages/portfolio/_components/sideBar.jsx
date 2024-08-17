@@ -7,7 +7,7 @@ import { routes } from '../../../constants/routes'
 
 export default function Sidebar() {
   return (
-    <div className="w-64 h-full bg-white px-8 py-3 border-r border-gray-300">
+    <div className="w-64 min-h-screen bg-white px-8 py-3 border-r border-gray-300">
       <div className="mb-10">
         <img src={logo} alt="Logo" className="w-12 mb-10" />
         <h1 className="text-2xl font-bold">MY PORTFOLIO</h1>
