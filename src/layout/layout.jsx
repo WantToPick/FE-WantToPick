@@ -10,12 +10,12 @@ export default function Layout() {
 
   return (
     <div className="flex flex-col min-h-screen">
-      {/* PortfolioPage에서는 Header를 숨기기 */}
+      {/* PortfolioPage에서는 기존의 Header와 Footer를 숨기기 */}
       {!isPortfolioPage && <Header />}
       <div className="flex-grow">
         <Outlet />
       </div>
-      <Footer />
+      {!isPortfolioPage && <Footer />}
     </div>
   );
 }
