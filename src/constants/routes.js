@@ -8,4 +8,9 @@ export const routes = {
 	freeBoard: '/free_board',
 	teamRecruit: '/team_recruit',
 	portfolio: '/portfolio',
+	portfolioIntro: '/portfolio/intro',
+	portfolioVocal: '/portfolio/vocal',
+	portfolioDance: '/portfolio/dance',
+	portfolioRap: '/portfolio/rap',
+	portfolioImage: '/portfolio/image',
 };

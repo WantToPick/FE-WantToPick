@@ -85,7 +85,7 @@ export default function Header() {
                 <FiBell className="text-xl cursor-pointer" />
                 <FiUser className="text-xl cursor-pointer" />
                 <button className="bg-[#526DF8] text-white px-5 py-1 rounded-md hover:bg-opacity-50">
-                  <Link to={routes.portfolio}>
+                  <Link to={routes.portfolioIntro}>
                     포트폴리오 +
                   </Link>
                 </button>

@@ -22,7 +22,7 @@ export default function Sidebar() {
           </NavLink>
         </li>
         <li className="border-b border-gray-300">
-          <NavLink to={routes.portfolio} activeClassName="font-bold" className="flex items-center space-x-2 text-black hover:font-bold">
+          <NavLink to={routes.portfolioIntro} activeClassName="font-bold" className="flex items-center space-x-2 text-black hover:font-bold">
             <FaFileAlt className="w-5 h-5 text-gray-400" />
             <span>자기소개서</span>
           </NavLink>
@@ -34,18 +34,18 @@ export default function Sidebar() {
           </div>
           <ul className="ml-7 space-y-2 my-2">
             <li>
-              <NavLink to="/portfolio/vocal" activeClassName="font-bold" className="text-black hover:font-bold">보컬</NavLink>
+              <NavLink to={routes.portfolioVocal} activeClassName="font-bold" className="text-black hover:font-bold">보컬</NavLink>
             </li>
             <li>
-              <NavLink to="/portfolio/dance" activeClassName="font-bold" className="text-black hover:font-bold">댄스</NavLink>
+              <NavLink to={routes.portfolioDance} activeClassName="font-bold" className="text-black hover:font-bold">댄스</NavLink>
             </li>
             <li>
-              <NavLink to="/portfolio/rap" activeClassName="font-bold" className="text-black hover:font-bold">랩</NavLink>
+              <NavLink to={routes.portfolioRap} activeClassName="font-bold" className="text-black hover:font-bold">랩</NavLink>
             </li>
           </ul>
         </li>
         <li className="border-b border-gray-300">
-          <NavLink to="/portfolio/image" className="flex items-center space-x-2 text-black hover:font-bold">
+          <NavLink to={routes.portfolioImage} className="flex items-center space-x-2 text-black hover:font-bold">
             <FaRegImage className="w-5 h-5 text-gray-400" />
             <span>이미지 포트폴리오</span>
           </NavLink>

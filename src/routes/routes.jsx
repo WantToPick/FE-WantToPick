@@ -11,6 +11,12 @@ import RecruitPage from '../pages/recruit/page';
 import FreeBoardPage from '../pages/community/freeBoard/page';
 import TeamRecruitPage from '../pages/community/teamRecruit/page';
 import PortfolioPage from '../pages/portfolio/page';
+import IntroPage from '../pages/portfolio/_components/introPage';
+import VocalPortfolioPage from '../pages/portfolio/_components/vocalPortfolio';
+import DancePortfolioPage from '../pages/portfolio/_components/dancePortfolio';
+import RapPortfolioPage from '../pages/portfolio/_components/rapPortfolio';
+import ImagePortfolioPage from '../pages/portfolio/_components/imagePortfolio';
+
 export default function Router() {
   const elements = [
     {
@@ -52,7 +58,30 @@ export default function Router() {
         {
           path: routes.portfolio,
           element: <PortfolioPage />,
-        },
+          children: [
+            {
+              path: routes.portfolioIntro,
+              element: <IntroPage />,
+            },
+            {
+              path: routes.portfolioVocal,
+              element: <VocalPortfolioPage />,
+            },
+            {
+              path: routes.portfolioDance,
+              element: <DancePortfolioPage />,
+            },
+            {
+              path: routes.portfolioRap,
+              element: <RapPortfolioPage />,
+            },
+            {
+              path: routes.portfolioImage,
+              element: <ImagePortfolioPage />,
+            },
+          ],
+        }
+        
       ],
     },
   ];

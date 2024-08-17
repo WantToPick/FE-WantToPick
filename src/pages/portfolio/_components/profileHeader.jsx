@@ -2,14 +2,41 @@ import React from 'react';
 
 export default function ProfileHeader() {
   return (
-    <div className="bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 p-4 text-white">
+    <div className="bg-gradient-to-r from-[#FFEAEB]/50 to-[#CEDAFF]/50 p-10 text-black flex justify-between items-center">
       <div className="flex items-center">
-        <img src="/path/to/profile-image.jpg" alt="Profile" className="rounded-full w-20 h-20" />
-        <div className="ml-4">
-          <h1 className="text-xl font-bold">이름: 장일점</h1>
-          <p>생년월일: 2007.08.03</p>
-          <p>이메일: abc1234@naver.com</p>
+        <div className="w-40 h-52 bg-gray-300 rounded-lg" />
+        <div className="ml-8">
+          <div className="flex mb-2">
+            <p className="text-base font-bold w-24">이름</p>
+            <p className="text-base font-normal">미입력</p>
+          </div>
+          <div className="flex mb-2">
+            <p className="text-base font-bold w-24">생년월일</p>
+            <p className="text-base font-normal">미입력</p>
+          </div>
+          <div className="flex mb-2">
+            <p className="text-base font-bold w-24">이메일</p>
+            <p className="text-base font-normal">미입력</p>
+          </div>
+          <div className="flex mb-2">
+            <p className="text-base font-bold w-24">포지션</p>
+            <p className="text-base font-normal">미입력</p>
+          </div>
+          <div className="flex">
+            <p className="text-base font-bold w-24">키워드</p>
+            <div className="flex space-x-2">
+              <span className="inline-block bg-black text-white px-3 py-1 rounded-full">미입력</span>
+            </div>
+          </div>
         </div>
+      </div>
+      <div className="flex space-x-4">
+        <button className="border border-black text-black font-bold py-1 px-4 rounded-3xl hover:bg-gray-300">
+          프로필 수정
+        </button>
+        <button className="border border-black text-black font-bold py-1 px-4 rounded-3xl hover:bg-gray-300">
+          포트폴리오 업로드
+        </button>
       </div>
     </div>
   );
