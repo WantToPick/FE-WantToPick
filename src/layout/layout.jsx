@@ -6,7 +6,7 @@ import { Outlet, useLocation } from 'react-router-dom';
 export default function Layout() {
   const location = useLocation();
 
-  const isPortfolioPage = location.pathname === '/portfolio';
+  const isPortfolioPage = location.pathname.includes('/portfolio');
 
   return (
     <div className="flex flex-col min-h-screen">
