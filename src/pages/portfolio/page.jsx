@@ -9,7 +9,7 @@ export default function PortfolioPage() {
       <Sidebar />
       <div className="flex flex-col flex-grow h-screen">
         <ProfileHeader />
-        <div className="flex-grow overflow-y-auto p-6">
+        <div className="flex-grow overflow-y-auto">
           <Outlet />
         </div>
       </div>
