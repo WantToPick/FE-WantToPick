@@ -1,6 +1,8 @@
 import React from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import logo from '../../assets/images/home/logo.png';
+import { routes } from '../../constants/routes'
+
 export default function LoginPopup({ isOpen, togglePopup }) {
   const navigate = useNavigate();
   const location = useLocation();
@@ -62,13 +64,14 @@ export default function LoginPopup({ isOpen, togglePopup }) {
               <div className="text-[#FFFFFF] text-xl">LOGIN</div>
             </button>
             <div className="flex justify-center mt-10 space-x-4">
-              <button
-                type="button"
+              {/*회원가입 누르면 링크 이동하도록*/}
+              <Link
+                to={routes.signUp}
                 className="text-black hover:text-[#A7A4A4]"
               >
                 회원가입
-              </button>
-              </div>
+              </Link>
+            </div>
           </form>
         </div>
       </div>
