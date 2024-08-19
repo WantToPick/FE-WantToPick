@@ -74,11 +74,11 @@ export default function Router() {
             },
             {
               path: routes.portfolioDance,
-              element: <DancePortfolioPage />,
+              element: id ? <DetailPage /> : <DancePortfolioPage />,
             },
             {
               path: routes.portfolioRap,
-              element: <RapPortfolioPage />,
+              element: id ? <DetailPage /> : <RapPortfolioPage />,
             },
             {
               path: routes.portfolioImage,
