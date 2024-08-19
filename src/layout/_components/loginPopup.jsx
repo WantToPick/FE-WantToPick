@@ -14,7 +14,7 @@ export default function LoginPopup({ isOpen, togglePopup }) {
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-      <div className="bg-white rounded-[25px] overflow-hidden shadow-lg w-3/4 h-3/4 flex relative">
+      <div className="bg-white rounded-3xl overflow-hidden shadow-lg w-3/4 h-3/4 flex relative">
         <button
           onClick={closePopup}
           className="absolute top-2 right-2 text-gray-500 hover:text-gray-800 text-2xl p-2"
@@ -24,7 +24,7 @@ export default function LoginPopup({ isOpen, togglePopup }) {
         <div className="w-1/2 p-8 flex flex-col justify-end items-center"
             style={{ background: 'linear-gradient(to bottom right, #FFEAEA, #D7E1FF)' }}
         >
-          <div className="absolute bottom-8 left-8 text-left text-[20px] text-[#526DF8]">WANTTOPICK</div>
+          <div className="absolute bottom-8 left-8 text-left text-xl text-[#526DF8]">WANTTOPICK</div>
           <div className="flex items-center justify-center flex-grow">
             <img src={logo} alt="Logo" className="h-14" />
           </div>
@@ -39,27 +39,27 @@ export default function LoginPopup({ isOpen, togglePopup }) {
               <input
                 type="text"
                 placeholder="Enter Your ID or E-mail" 
-                className="w-full px-4 py-2 border border-black rounded-[72px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-black rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />             {/*테두리가 겹치는 문제가 있어요*/}
             </div>
             <div className="mb-4">
               <input
                 type="password"
                 placeholder="Enter Your Password" 
-                className="w-full px-4 py-2 border border-black rounded-[72px] focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-4 py-2 border border-black rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
             <div className="mb-4">
               <label className="inline-flex items-center">
                 <input type="checkbox" className="form-checkbox" />
-                <span className="ml-2 text-[15px]">로그인 유지</span>
+                <span className="ml-2 text-base">로그인 유지</span>
               </label>
             </div>
             <button
               type="button"
-              className="w-full bg-[#526DF8] text-white py-2 rounded-[72px]"
+              className="w-full bg-[#526DF8] text-white py-2 rounded-full"
             >
-              <div className="text-[#FFFFFF] text-[20px]">LOGIN</div>
+              <div className="text-[#FFFFFF] text-xl">LOGIN</div>
             </button>
             <div className="flex justify-center mt-10 space-x-4">
               <button
