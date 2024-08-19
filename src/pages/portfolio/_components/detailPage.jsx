@@ -42,8 +42,9 @@ export default function DetailPage() {
 
   return (
     <div className="p-8">
-      <div className="mb-4">
-        <h1 className="text-2xl font-bold mb-4">비디오 포트폴리오 | 보컬 </h1>
+      <div className="mb-4 flex justify-between items-center">
+        <h1 className="text-2xl font-bold">비디오 포트폴리오 | 보컬</h1>
+        <button className="text-gray-600 underline">편집</button>
       </div>
       
       <div className="border rounded-lg p-10 mb-4">
