@@ -7,23 +7,23 @@ export default function ProfileHeader() {
         <div className="w-40 h-52 bg-gray-300 rounded-lg" />
         <div className="ml-8">
           <div className="flex mb-2">
-            <p className="text-base font-bold w-24">이름</p>
-            <p className="text-base font-normal">미입력</p>
+            <p className="text-lg font-bold w-24">이름</p>
+            <p className="text-lg font-normal">미입력</p>
           </div>
           <div className="flex mb-2">
-            <p className="text-base font-bold w-24">생년월일</p>
-            <p className="text-base font-normal">미입력</p>
+            <p className="text-lg font-bold w-24">생년월일</p>
+            <p className="text-lg font-normal">미입력</p>
           </div>
           <div className="flex mb-2">
-            <p className="text-base font-bold w-24">이메일</p>
-            <p className="text-base font-normal">미입력</p>
+            <p className="text-lg font-bold w-24">이메일</p>
+            <p className="text-lg font-normal">미입력</p>
           </div>
           <div className="flex mb-2">
-            <p className="text-base font-bold w-24">포지션</p>
-            <p className="text-base font-normal">미입력</p>
+            <p className="text-lg font-bold w-24">포지션</p>
+            <p className="text-lg font-normal">미입력</p>
           </div>
           <div className="flex">
-            <p className="text-base font-bold w-24">키워드</p>
+            <p className="text-lg font-bold w-24">키워드</p>
             <div className="flex space-x-2">
               <span className="inline-block bg-black text-white px-3 py-1 rounded-full">미입력</span>
             </div>
