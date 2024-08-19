@@ -70,7 +70,7 @@ export default function Router() {
             },
             {
               path: routes.portfolioVocal,
-              element: id ? <DetailPage /> : <VocalPortfolioPage />, // 상세 페이지와 포트폴리오 페이지를 조건부 렌더링
+              element: id ? <DetailPage /> : <VocalPortfolioPage />,
             },
             {
               path: routes.portfolioDance,
