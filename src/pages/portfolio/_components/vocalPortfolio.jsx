@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const itemsPerPage = 9; // 페이지당 보여줄 항목 수
 
@@ -10,13 +11,14 @@ export default function VocalPortfolioPage() {
   const [selectedItems, setSelectedItems] = useState([]); // 선택된 항목 관리
 
   useEffect(() => {
-    // 이 부분에서 DB나 API에서 데이터 불러오기
+    // 이 부분에서 DB나 API에서 데이터를 불러올 수 있습니다.
     const fetchData = async () => {
-      // 예시로 데이터 넣음
+      // 예시 데이터
       const fetchedData = [
         { id: 1, title: '아이유 | Love wins all', description: '보컬 영상', thumbnail: 'path/to/thumbnail1.jpg' },
         { id: 2, title: '백예린 | 우주를 줄게', description: '보컬 영상', thumbnail: 'path/to/thumbnail2.jpg' },
         { id: 3, title: '소녀시대 | 다시 만난 세계', description: '보컬 영상', thumbnail: 'path/to/thumbnail3.jpg' },
+        // 더 많은 데이터...
       ];
       setData(fetchedData);
     };
@@ -25,7 +27,7 @@ export default function VocalPortfolioPage() {
   }, []);
 
   useEffect(() => {
-    // 현재 페이지에 해당하는 데이터를 계산
+    // 현재 페이지에 해당하는 데이터를 계산합니다.
     const offset = (currentPage - 1) * itemsPerPage;
     const paginatedItems = data.slice(offset, offset + itemsPerPage);
     setPaginatedData(paginatedItems);
@@ -81,9 +83,11 @@ export default function VocalPortfolioPage() {
                 onChange={() => handleSelectItem(item.id)}
               />
             )}
-            <img src={item.thumbnail} alt={item.title} className="w-full h-40 object-cover mb-2 rounded" />
-            <h2 className="text-lg font-bold">{item.title}</h2>
-            <p className="text-gray-600">{item.description}</p>
+            <Link to={`/portfolio/vocal?id=${item.id}`}>
+              <img src={item.thumbnail} alt={item.title} className="w-full h-40 object-cover mb-2 rounded" />
+              <h2 className="text-lg font-bold">{item.title}</h2>
+              <p className="text-gray-600">{item.description}</p>
+            </Link>
           </div>
         ))}
       </div>

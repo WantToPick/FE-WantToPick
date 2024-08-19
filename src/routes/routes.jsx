@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRoutes } from 'react-router-dom';
+import { useRoutes, useLocation } from 'react-router-dom';
 import { routes } from '../constants/routes';
 
 import Layout from '../layout/layout';
@@ -16,8 +16,13 @@ import VocalPortfolioPage from '../pages/portfolio/_components/vocalPortfolio';
 import DancePortfolioPage from '../pages/portfolio/_components/dancePortfolio';
 import RapPortfolioPage from '../pages/portfolio/_components/rapPortfolio';
 import ImagePortfolioPage from '../pages/portfolio/_components/imagePortfolio';
+import DetailPage from '../pages/portfolio/_components/detailPage'; // 상세 페이지 추가
 
 export default function Router() {
+  const location = useLocation();
+  const params = new URLSearchParams(location.search);
+  const id = params.get('id');
+
   const elements = [
     {
       path: '/',
@@ -65,7 +70,7 @@ export default function Router() {
             },
             {
               path: routes.portfolioVocal,
-              element: <VocalPortfolioPage />,
+              element: id ? <DetailPage /> : <VocalPortfolioPage />, // 상세 페이지와 포트폴리오 페이지를 조건부 렌더링
             },
             {
               path: routes.portfolioDance,
@@ -80,8 +85,7 @@ export default function Router() {
               element: <ImagePortfolioPage />,
             },
           ],
-        }
-        
+        },
       ],
     },
   ];
