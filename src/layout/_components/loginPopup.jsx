@@ -3,13 +3,19 @@ import { useNavigate, useLocation, Link } from 'react-router-dom';
 import logo from '../../assets/images/home/logo.png';
 import { routes } from '../../constants/routes'
 
-export default function LoginPopup({ isOpen, togglePopup }) {
+export default function LoginPopup({ isOpen, togglePopup, setIsLoggedIn }) {
   const navigate = useNavigate();
   const location = useLocation();
 
   const closePopup = () => {
     togglePopup();
     navigate(location.pathname.split('/login')[0]); // 현재 경로에서 '/login'을 제거하여 원래 경로로 돌아감
+  };
+
+  const handleLogin = () => {
+    // 로그인 로직 추가 가능
+    setIsLoggedIn(true);
+    closePopup();
   };
 
   if (!isOpen) return null;
@@ -59,7 +65,12 @@ export default function LoginPopup({ isOpen, togglePopup }) {
             </div>
             <button
               type="button"
+<<<<<<< HEAD
               className="w-full bg-[#526DF8] text-white py-2 rounded-full"
+=======
+              className="w-full bg-[#526DF8] text-white py-2 rounded-[72px]"
+              onClick={handleLogin}  // 이 부분에서 로그인 상태를 true로 변경
+>>>>>>> main
             >
               <div className="text-[#FFFFFF] text-xl">LOGIN</div>
             </button>

@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import Step1 from './_component/step1'; // 올바른 경로로 수정
-import Step2 from './_component/step2'; // 올바른 경로로 수정
-import Step3 from './_component/step3'; // 올바른 경로로 수정
-import Step4 from './_component/step4'; // 올바른 경로로 수정
-import Step5 from './_component/step5'; // 올바른 경로로 수정
+import Step1 from './_components/step1';
+import Step2 from './_components/step2';
+import Step3 from './_components/step3';
+import Step4 from './_components/step4';
+import Step5 from './_components/step5';
 import logoImg from '../../../assets/images/logo.png';
 
 const SignupForm = () => {
